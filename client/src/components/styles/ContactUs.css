@@ -1,0 +1,71 @@
+.contactUs {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.contactUs ul {
+    width: fit-content;
+    list-style-type: none;
+    line-height: 5vh;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.contactUs li{
+    margin: 1vw 0.5vw;
+}
+
+.contactUs p {
+    writing-mode: vertical-lr;
+    margin: 1vw 0;
+    padding: 0;
+}
+
+@keyframes linkDeHover {
+    0% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.contactUs p, li {
+    animation: linkDeHover;
+    animation-duration: 300ms;
+}
+
+@keyframes linkHover {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+.contactUs p:hover, .contactUs li:hover {
+    animation-name: linkHover;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    color: var(--linkColor);
+    cursor: pointer;
+}
+
+.contactUs ul::after {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 150px;
+    margin-left: 1vw;
+    background-color: var(--contactUsLineColor);
+}
+
+.contactUs a{
+    color: var(--fontColor);
+    text-decoration: none;
+}

@@ -1,0 +1,156 @@
+.mainContent {
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 0.45fr 0.65fr;
+    grid-template-rows: max-content;
+    grid-auto-flow: row;
+    box-sizing: border-box;
+    padding: 3vw 0 0 0;
+}
+
+.mainContent {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.mainContent::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.mainContent h1 {
+    font-size: 5.3vw;
+    margin: 0;
+}
+
+.mainContent h2 {
+    font-size: 2vw;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.mainContent h3 {
+    font-size: 1.5vw;
+}
+
+.aboutButton {
+    border: 0;
+    background: linear-gradient(270deg, #f06449, #ef3636);
+    color: white;
+    padding: 10px 7px;
+    font-weight: 600;
+    font-size: 0.87em;
+    letter-spacing: 2px;
+}
+
+.displayPicture {
+    border-radius: 20%;
+    margin: 8% 14% 8% 0;
+    height: 17vw;
+    border: 10px solid rgba(0, 0, 0, 0.2);
+    /* box-shadow: 10px 10px 10px rgba(0,0,0, 0.2); */
+    justify-self: end;
+    opacity: 80%;
+}
+
+@keyframes dpAnimation {
+    0% {
+        transform: translateY(0px)
+    }
+
+    20% {
+        transform: translateY(-10px)
+    }
+
+    50% {
+        transform: translateY(0px)
+    }
+
+    70% {
+        transform: translateY(-10px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.displayPicture:hover {
+    animation: dpAnimation 5s infinite;
+}
+
+.myDescription {
+    grid-column: 1/3;
+    padding: 3vw 12vw 0;
+    margin: 0;
+    text-align: justify;
+    line-height: 2vw;
+}
+
+.technologyImageContainer {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    padding: 2vw 10vw;
+}
+
+.technologyImages {
+    height: 8vw;
+}
+
+.technologyImageContainer i {
+    font-size: 9vw;
+}
+
+.reactImg:hover {
+    color: #5ed3f3;
+    transition: color 500ms;
+}
+
+.htmlImage:hover {
+    color: #e54c21;
+    transition: color 500ms;
+}
+
+.cssImage:hover {
+    color: #2e5d9d;
+    transition: color 500ms;
+}
+
+.jsImage:hover {
+    color: #efd81d;
+    transition: color 500ms;
+}
+
+/* WORK SECTION */
+
+.workPage{
+    grid-column: 1/3;
+    padding: 5vw;
+    list-style-type: none;
+}
+
+.project1{
+    width: 66%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.fitAndLifeImg{
+    object-fit: cover;
+    width: 100%;
+}
+
+.mask{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    background-color: red;
+    z-index: 1;
+}
