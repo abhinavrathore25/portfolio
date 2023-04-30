@@ -48,7 +48,7 @@
     }
 }
 
-.contactUs p:hover, .contactUs li:hover {
+.contactUs p:hover, .contactUs i:hover {
     animation-name: linkHover;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
@@ -68,4 +68,10 @@
 .contactUs a{
     color: var(--fontColor);
     text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .contactUs{
+        display: none;
+    }
 }

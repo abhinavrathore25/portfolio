@@ -5,7 +5,8 @@
     height: 44px;
     width: 100%;
     padding: 2%;
-    background-color: rgba(255, 255, 255, 0.05);
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    color: var(--navItemsColor) !important;
     backdrop-filter: blur(10px);
     border-bottom: rgba(255, 255, 255, 0.6);
 }
@@ -25,11 +26,11 @@
     font-size: 1.2vw;
     border-radius: 3px;
     padding: 5px 10px;
-    animation: navbarButtonDeAnimation 1s forwards;
+    animation: navbarButtonDeAnimation 0.5s forwards;
 }
 
 .navbar button:hover {
-    animation: navbarButtonAnimation 1s forwards;
+    animation: navbarButtonAnimation 0.5s forwards;
 }
 
 @keyframes navbarButtonAnimation {
@@ -43,8 +44,10 @@
     100% {
         cursor: pointer;
         border-radius: 0;
-        background-color: var(--fontColor);
+        background-color: var(--secondaryColor);
         color: rgba(255, 255, 255, 0.8);
+        /* color: var(--secondaryColor); */
+
     }
 }
 
@@ -52,7 +55,7 @@
     0% {
         cursor: pointer;
         border-radius: 0;
-        background-color: var(--fontColor);
+        background-color: var(--secondaryColor);
         color: rgba(255, 255, 255, 0.8);
     }
     

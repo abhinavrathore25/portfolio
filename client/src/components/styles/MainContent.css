@@ -1,11 +1,10 @@
 .mainContent {
     overflow: scroll;
-    display: grid;
-    grid-template-columns: 0.45fr 0.65fr;
-    grid-template-rows: max-content;
-    grid-auto-flow: row;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     padding: 3vw 0 0 0;
+    align-items: center;
 }
 
 .mainContent {
@@ -21,22 +20,33 @@
 }
 
 .mainContent h1 {
-    font-size: 5.3vw;
+    font-size: max(5.3vw, 5.3vh);
     margin: 0;
 }
 
 .mainContent h2 {
-    font-size: 2vw;
+    font-size: max(2vw, 2vh);
     font-family: 'Libre Baskerville', serif;
     font-style: italic;
     font-weight: 400;
 }
 
 .mainContent h3 {
-    font-size: 1.5vw;
+    font-size: max(1.5vw, 2vh);
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+}
+
+.aboutContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.45fr 0.65fr;
+    flex: 0 0 90%;
+    align-items: center;
 }
 
 .aboutButton {
+    position: relative;
     border: 0;
     background: linear-gradient(270deg, #f06449, #ef3636);
     color: white;
@@ -44,6 +54,38 @@
     font-weight: 600;
     font-size: 0.87em;
     letter-spacing: 2px;
+    overflow: hidden;
+}
+
+.aboutButton{
+    cursor: pointer;
+}
+
+.aboutMask{
+    background: linear-gradient(to right, blue, navy 80%);
+    color: transparent;
+    position: absolute;
+    padding: 10px 7px;
+    top: 0px;
+    left: -110px;
+    transition: left 500ms;
+}
+
+.aboutButton:hover>.aboutMask{
+    left: 110px;
+    transition: left 500ms;
+}
+
+.aboutAngleIcon{
+    position: relative;
+    left: -18px;
+    bottom: -2px;
+    transition: left 500ms;
+}
+
+.aboutButton:hover+.aboutAngleIcon{
+    left: -12px;
+    transition: left 500ms;
 }
 
 .displayPicture {
@@ -53,7 +95,28 @@
     border: 10px solid rgba(0, 0, 0, 0.2);
     /* box-shadow: 10px 10px 10px rgba(0,0,0, 0.2); */
     justify-self: end;
-    opacity: 80%;
+}
+
+.workTagContainer{
+    text-align: center;
+    flex: 0 0 10%;
+}
+
+.workTag{
+    font-size: 1.2rem;
+    margin: 15% 0;
+}
+
+.workTagContainer>i{
+    position: relative;
+    top: 0px;
+    transition: top 500ms;
+}
+
+.workTagContainer:hover>i{
+    position: relative;
+    top: 5px;
+    transition: top 500ms;
 }
 
 @keyframes dpAnimation {
@@ -82,61 +145,15 @@
     animation: dpAnimation 5s infinite;
 }
 
-.myDescription {
-    grid-column: 1/3;
-    padding: 3vw 12vw 0;
-    margin: 0;
-    text-align: justify;
-    line-height: 2vw;
-}
-
-.technologyImageContainer {
-    grid-column: 1/3;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    justify-items: center;
-    padding: 2vw 10vw;
-}
-
-.technologyImages {
-    height: 8vw;
-}
-
-.technologyImageContainer i {
-    font-size: 9vw;
-}
-
-.reactImg:hover {
-    color: #5ed3f3;
-    transition: color 500ms;
-}
-
-.htmlImage:hover {
-    color: #e54c21;
-    transition: color 500ms;
-}
-
-.cssImage:hover {
-    color: #2e5d9d;
-    transition: color 500ms;
-}
-
-.jsImage:hover {
-    color: #efd81d;
-    transition: color 500ms;
-}
-
 /* WORK SECTION */
 
 .workPage{
-    grid-column: 1/3;
     padding: 5vw;
     list-style-type: none;
 }
 
 .project1{
-    width: 66%;
+    width: 80%;
     overflow: hidden;
     margin: auto;
 }
@@ -153,4 +170,19 @@
     /* background-color: rgba(255, 255, 255, 0.5); */
     background-color: red;
     z-index: 1;
+}
+
+@media (max-width: 800px) {
+    .aboutContainer{
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        justify-items: center;
+    }
+
+    .aboutContainer .displayPicture{
+        justify-self: unset;
+        margin: 0;
+        width: 200px;
+        height: 200px;
+    }
 }

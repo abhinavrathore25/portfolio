@@ -1,8 +1,14 @@
 :root{
-    --fontColor: #4c4f65;
+    --backgroundColor: #1c1d25;
+    --navItemsColor: #b0b2c3;
+    --descriptionColor: #ececec;
+    /* --fontColor: #4c4f65; */
+    --fontColor: #f3f3f3;
     --contactUsLineColor: #4c4f65 ;
     --linkColor: rgb(35,89,165);
     --secondaryColor: #F05C46;
+    --aboutMeFontHeadingColor: #22232b;
+    --aboutMeFontColor: #707074;
 }
 
 * {
@@ -24,7 +30,7 @@ body {
 }
 
 body {
-    background:
+    /* background:
         radial-gradient(circle at 20% 80%,
             rgb(246, 116, 124),
             transparent 50%),
@@ -39,8 +45,9 @@ body {
             transparent 60%),
         radial-gradient(circle at 0% 10%,
             rgba(110, 155, 246, 0.4) 10%,
-            transparent 70%);
+            transparent 70%); */
             
+    background-color: var(--backgroundColor);
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'League Spartan', sans-serif;

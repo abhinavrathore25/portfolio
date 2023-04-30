@@ -22,7 +22,7 @@
     opacity: 1;
   }
 
-  100%{
+  100% {
     opacity: 0;
     visibility: hidden;
   }
@@ -41,4 +41,14 @@
   justify-content: center;
   align-items: center;
   font-size: 6.5vw;
+}
+
+@media (max-width: 800px) {
+  .App {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutMeModal{
+    display: block;
+  }
 }
