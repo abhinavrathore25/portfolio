@@ -1,0 +1,73 @@
+:root{
+    --backgroundColor: #1c1d25;
+    --navItemsColor: #b0b2c3;
+    --descriptionColor: #ececec;
+    /* --fontColor: #4c4f65; */
+    --fontColor: #f3f3f3;
+    --contactUsLineColor: #4c4f65 ;
+    --linkColor: rgb(35,89,165);
+    --secondaryColor: #F05C46;
+    --aboutMeFontHeadingColor: #22232b;
+    --aboutMeFontColor: #707074;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--fontColor);
+}
+
+body {
+    /* background:
+        radial-gradient(circle at 20% 80%,
+            rgb(246, 116, 124),
+            transparent 50%),
+        radial-gradient(circle at 60% 10%,
+            rgb(157, 143, 244) 10%,
+            transparent 50%),
+        radial-gradient(circle at 100% 30%,
+            rgb(244, 165, 254) 10%,
+            transparent 50%),
+        radial-gradient(circle at 85% 90%,
+            rgb(110, 155, 246) 10%,
+            transparent 60%),
+        radial-gradient(circle at 0% 10%,
+            rgba(110, 155, 246, 0.4) 10%,
+            transparent 70%); */
+            
+    background-color: var(--backgroundColor);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* Remove Scrollbar */
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+#root{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px calc(100% - 60px);
+}
