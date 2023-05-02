@@ -12,9 +12,9 @@ function App() {
 
   return (
     <>
-      {/* <div className='modal' >
+      <div className='modal' >
         <p>Portfolio still in development mode. Work In Progress.</p>
-      </div> */}
+      </div>
 
       <img src={ backgroundImage } alt='backgroundImage' 
         style={{ position: 'absolute', zIndex:'-100',
