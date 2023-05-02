@@ -26,7 +26,8 @@
 
 .mainContent h2 {
     font-size: max(2vw, 2vh);
-    font-family: 'Libre Baskerville', serif;
+    /* font-family: 'Libre Baskerville', serif; */
+    font-family: 'Space Mono', monospace;
     font-style: italic;
     font-weight: 400;
 }
@@ -148,28 +149,67 @@
 /* WORK SECTION */
 
 .workPage{
-    padding: 5vw;
+    padding: 5vw 5vw 0 5vw;
     list-style-type: none;
 }
 
-.project1{
+.workPage>li{
+    margin: 15% 0;
+}
+
+.workPage>li:first-child{
+    margin-top: 0;
+}
+
+.workPage>li:last-child{
+    margin-bottom: 0;
+}
+
+.project{
+    position: relative;
     width: 80%;
     overflow: hidden;
     margin: auto;
 }
 
-.fitAndLifeImg{
+.workImage{
     object-fit: cover;
     width: 100%;
 }
 
-.mask{
-    position: relative;
+.workMask{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
     height: 100%;
     width: 100%;
-    /* background-color: rgba(255, 255, 255, 0.5); */
-    background-color: red;
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+
+.workMask:hover{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.workMask button{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    color: var(--fontColor);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 2%;
+}
+
+.workMask button:hover{
+    background: linear-gradient(270deg, #f06449, #ef3636);
+}
+
+.workLink{
+    text-decoration: none;
+    color: var(--fontColor);
 }
 
 @media (max-width: 800px) {

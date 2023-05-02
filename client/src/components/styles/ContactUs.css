@@ -33,7 +33,7 @@
     }
 }
 
-.contactUs p, li {
+.contactUs p,.contactUs li {
     animation: linkDeHover;
     animation-duration: 300ms;
 }

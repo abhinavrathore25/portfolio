@@ -19,7 +19,7 @@
     font-weight: 800;
 }
 
-.navbar button {
+.navbar .resume {
     background-color: transparent;
     border: 1px solid var(--fontColor);
     color: var(--fontColor);
@@ -29,7 +29,7 @@
     animation: navbarButtonDeAnimation 0.5s forwards;
 }
 
-.navbar button:hover {
+.navbar .resume:hover {
     animation: navbarButtonAnimation 0.5s forwards;
 }
 
