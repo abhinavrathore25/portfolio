@@ -5,6 +5,7 @@ import fitAndLife from '../resources/fitAndLife.png';
 import bugTrackerImg from '../resources/bugTrackerImg.png';
 import Footer from './Footer';
 import { useEffect } from 'react';
+// import AnimatedNumber from './AnimatedNumber';
 
 const MainContent = ({ setShowAboutMe }) => {
     const technologies = ['ReactJs', 'NodeJs', 'MongoDB', 'Express', 'Javascript', 'MUI', 'Bootstrap'];
@@ -76,6 +77,7 @@ const MainContent = ({ setShowAboutMe }) => {
                 <ul className="workPage" id="workPage">
                     <li>
                         <div className='project'>
+                            {/* <AnimatedNumber number='01' /> */}
                             <img src={fitAndLife} className='workImage' alt='fitAndLife' />
                             <div className='workMask'>
                                 <button>
@@ -90,6 +92,7 @@ const MainContent = ({ setShowAboutMe }) => {
                     <li>
 
                         <div className='project'>
+                            {/* <AnimatedNumber number='02' /> */}
                             <img src={bugTrackerImg} className='workImage' alt='bugTrackerImg' />
                             <div className='workMask'>
                                 <button>
